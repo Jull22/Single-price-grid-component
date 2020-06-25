@@ -1,0 +1,225 @@
+
+:root {
+    --clr-cyan: hsl(179, 62%, 43%);
+    --clr-yellow: hsl(71, 73%, 54%);
+    --clr-gray: hsl(204, 43%, 93%);
+    --clr-blue: hsl(218, 22%, 67%);
+    --ff-body: 'Karla', sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    /* width: 100%; */
+    font-family: var(--ff-body);
+    font-size: 16px;
+    margin: 0;
+    max-width: 600px;
+    
+}
+
+
+/* colors  */
+
+
+h1 {
+    font-size: 25px;
+    color: var(--clr-cyan);
+}
+
+h2 {
+    color: var(--clr-gray);
+    margin-bottom: 0.8em;
+    margin-top: 0;
+}
+
+p, ul, strong {
+    color: var(--clr-gray);
+    line-height: 25px;
+    
+    
+}
+
+header p {
+    color: var(--clr-blue);
+}
+
+strong + p {
+    display: inline-block;
+    font-weight: 100;
+    opacity: 60%;
+    
+}
+
+.green {
+    color: var(--clr-yellow);
+    font-weight: 700;
+    font-size: 17px;
+    
+}
+
+
+.sign-up {
+    box-sizing: border-box;
+    padding: 1.3em 1.5em ;
+    width: 100%;
+    height:auto;
+    
+    background-color: var(--clr-yellow);
+    border: 2px solid rgb(99, 146, 29);
+    color: var(--clr-gray);
+    font-weight: 700;
+    margin-top: 2em;
+    border-radius: 5px;
+}
+
+.sign-up:hover {
+    box-sizing: border-box;
+    
+    border: 2px solid green;
+    
+}
+
+/* grid */
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1;
+    grid-row: 30% 20% 10% 40%;
+    grid-template-areas: 
+    "header"
+    "price"
+    "why-us"
+    "footer";
+    
+}
+
+
+/*  layout */
+
+.main-container {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+header, .price, .why-us, .footer {
+    padding: 2em;
+    
+}
+
+
+header {
+    grid-area: header;
+    background-color: white;
+    padding-top: 0;
+}
+
+
+.price {
+    grid-area: price;
+    background-color: var(--clr-cyan);
+    text-align: center;
+}
+
+
+.why-us {
+    display: flex;
+    flex-direction: column;
+    grid-area: why-us;
+    background-color: hsl(179, 42%, 50%);
+    
+}
+
+.why-us h2{
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+    
+    /* background-color: hsl(179, 42%, 50%); */
+}
+
+ul {
+    list-style: none;
+    margin:0 -38px;
+    opacity: 60%;
+    
+}
+
+strong {
+    font-size: 2.3em;
+}
+
+.price-per-month {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.price-per-month p {
+    line-height: 0;
+    text-indent: 15px;
+}
+
+
+
+@media only screen and (min-width: 600px){
+    body {
+        max-width:1440px;
+        max-height: 100px;
+        
+    }
+
+    .main-container {
+        
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-row: 45% 55% 5%;
+        grid-template-areas: 
+        "header header"
+        "price why-us"
+        "footer footer"
+        
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        
+        height: auto;
+        
+    }
+
+    .price {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        
+    }
+
+    
+
+   
+
+    .price-per-month {
+        display: flex;
+        align-content: center;
+        justify-content: left;
+    }
+
+    .sign-up {
+        margin-top: 0.5em;
+    }
+
+    footer {
+        height: 5vh;
+    }
+}
