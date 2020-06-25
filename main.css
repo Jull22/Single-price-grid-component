@@ -47,6 +47,7 @@ p, ul, strong {
 
 header p {
     color: var(--clr-blue);
+    margin: 0.3em 0 0;
 }
 
 strong + p {
@@ -121,6 +122,8 @@ header {
 }
 
 
+
+
 .price {
     grid-area: price;
     background-color: var(--clr-cyan);
@@ -192,7 +195,6 @@ strong {
     header {
         display: flex;
         flex-direction: column;
-        
         height: auto;
         
     }
